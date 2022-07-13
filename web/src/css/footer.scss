@@ -1,0 +1,33 @@
+// footer 
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #2e2e2e;
+  height: 100px;
+
+  .footer {  
+    width: 1000px;
+    margin: 0 auto;  
+    color: #fff;
+    
+    .footer_top {    
+      justify-content: space-between;
+    }
+  
+    .footer_bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        img {
+          width: 120px;
+        }
+      }
+      
+      .sns ul{
+        display: flex;
+      }
+    }
+  }
+}

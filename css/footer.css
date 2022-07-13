@@ -1,0 +1,26 @@
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #2e2e2e;
+  height: 100px;
+}
+footer .footer {
+  width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+}
+footer .footer .footer_top {
+  justify-content: space-between;
+}
+footer .footer .footer_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .footer_bottom .logo img {
+  width: 120px;
+}
+footer .footer .footer_bottom .sns ul {
+  display: flex;
+}/*# sourceMappingURL=footer.css.map */
