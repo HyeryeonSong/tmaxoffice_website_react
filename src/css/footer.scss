@@ -1,15 +1,17 @@
 // footer 
 footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  width: 100%;  
   background-color: #2e2e2e;
   height: 100px;
+  position: absolute;
+  bottom: 0;
 
   .footer {  
     width: 1000px;
     margin: 0 auto;  
+    padding-top: 20px;
     color: #fff;
+    font-size: 14px;
     
     .footer_top {    
       justify-content: space-between;
@@ -25,8 +27,13 @@ footer {
         }
       }
       
-      .sns ul{
-        display: flex;
+      .sns {
+        .sns_list {
+          display: flex;
+          li img {
+            width: 30px;
+          }
+        }        
       }
     }
   }

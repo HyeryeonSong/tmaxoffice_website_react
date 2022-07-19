@@ -1,14 +1,16 @@
 footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
   background-color: #2e2e2e;
   height: 100px;
+  position: absolute;
+  bottom: 0;
 }
 footer .footer {
   width: 1000px;
   margin: 0 auto;
+  padding-top: 20px;
   color: #fff;
+  font-size: 14px;
 }
 footer .footer .footer_top {
   justify-content: space-between;
@@ -21,6 +23,9 @@ footer .footer .footer_bottom {
 footer .footer .footer_bottom .logo img {
   width: 120px;
 }
-footer .footer .footer_bottom .sns ul {
+footer .footer .footer_bottom .sns .sns_list {
   display: flex;
+}
+footer .footer .footer_bottom .sns .sns_list li img {
+  width: 30px;
 }/*# sourceMappingURL=footer.css.map */
