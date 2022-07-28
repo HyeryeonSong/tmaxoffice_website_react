@@ -1,66 +1,109 @@
-.gnb_wrapper {
+@charset "UTF-8";
+/* 브라우저 크기가 1200px 이하일때 */
+/* 브라우저 크기가 1920px 이하일때 */
+.gnb__wrapper {
   width: 100%;
-  height: 40px;
-  background-color: #000;
-  font-size: 14px;
-}
-.gnb_wrapper .gnb {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  height: 40px;
-  overflow: hidden;
-  transition: height 1s;
-}
-.gnb_wrapper .gnb:hover {
-  height: 200px;
-}
-.gnb_wrapper .gnb .gnb_list {
+  height: 90px;
+  background-color: #192033;
+  font-size: 15px;
   display: flex;
-  color: #000;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link {
-  text-align: center;
-  width: 280px;
-  position: relative;
+.gnb__wrapper .gnb__wrap {
+  display: flex;
+  margin: 0 auto;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_title {
+@media (max-width: 1200px) {
+  .gnb__wrapper .gnb__wrap {
+    width: 90%;
+  }
+}
+@media (max-width: 1920px) {
+  .gnb__wrapper .gnb__wrap {
+    width: 90%;
+  }
+}
+.gnb__wrapper .gnb__wrap .gnb__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 14%;
+}
+.gnb__wrapper .gnb__wrap .gnb__logo .gnb__logo--img {
+  width: 190px;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav {
+  margin-left: auto;
+  height: 4.68%;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list {
+  width: 72%;
+  display: flex;
+  color: #192033;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link {
+  margin-right: 105px;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link:last-child {
+  margin-right: 0;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--link-title {
+  height: 90px;
+  line-height: 90px;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--link-title:hover a {
+  color: #fff;
+  text-shadow: 0 0 0.5px #fff, 0 0 0.5px #fff;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--link-title a {
+  color: #9F9F9F;
+  font-weight: bold;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu {
+  visibility: hidden;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
-  background-color: #000;
+  background-color: #9F9F9F;
+  transition: all ease-in 0.1s;
+  transition-delay: 0.1s;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_title a {
-  color: #eee;
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu.active {
+  z-index: 100;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_title .gnb_logo {
-  width: 100px;
-}
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_title:hover a {
-  color: #777;
-}
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_title:hover a::after {
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu.active::before {
   content: "";
   position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  display: block;
   width: 100%;
-  height: 4px;
-  left: 0;
-  background-color: #999999;
-  margin-top: 36px;
+  max-width: 1920px;
+  height: 0;
+  background-color: #EFF3F8;
+  transition: all ease-in-out 0.3s;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_submenu {
-  background-color: #cccccc;
-  width: 100%;
-  height: 200px;
-  padding: 10px 0;
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list {
+  position: absolute;
+  display: flex;
+  z-index: 100;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_submenu ul li {
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link {
   height: 25px;
+  padding-top: 21px;
   line-height: 25px;
+  margin-right: 20px;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_submenu ul li img {
-  width: 100px;
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link a {
+  color: #323232;
+  font-size: 15px;
+  font-weight: 600;
 }
-.gnb_wrapper .gnb .gnb_list .gnb_link .gnb_submenu ul li a {
-  color: #1a1a1a;
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link a:hover {
+  text-shadow: 0 0 0.5px #323232, 0 0 0.5px #323232;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link:hover .active {
+  visibility: visible;
+  z-index: 100;
+}
+.gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link:hover .active::before {
+  content: "";
+  height: 70px;
 }/*# sourceMappingURL=header.css.map */

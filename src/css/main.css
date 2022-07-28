@@ -1,0 +1,35 @@
+.carousel--img {
+  width: 100vw;
+}
+
+.slick-arrow {
+  width: 65px;
+  height: 65px;
+  border: 0;
+  position: absolute;
+  background-size: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  top: calc(50% - 65px);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.slick-prev {
+  background-image: url(../img/icon_prev.png);
+  left: 2.864%;
+}
+
+.slick-next {
+  background-image: url(../img/icon_next.png);
+  right: 2.864%;
+}
+
+.carousel--dots ul {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background-color: red;
+}/*# sourceMappingURL=main.css.map */

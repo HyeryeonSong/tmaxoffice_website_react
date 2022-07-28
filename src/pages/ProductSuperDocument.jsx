@@ -1,13 +1,19 @@
+import MainImage from "../pages/components/MainImage";
+import img2 from "../img/bg_img2.png";
+import title2 from "../img/title2.png";
 
-
-function VisionTmaxOffice() {
+function ProductSuperDocument() {
   return (
     <>
       <section>
-        <h2>product - SuperDocument</h2>
+        <MainImage 
+          img={img2}
+          titleImg={title2}
+          title="SuperDocument"
+        />
       </section>
     </>
   );
 }
 
-export default VisionTmaxOffice;
+export default ProductSuperDocument;
