@@ -18,7 +18,6 @@ function OpenFamilysite() {
     selectItem.style.display = "";
     moreBtn.style.transform ="rotate(0deg)";
   }
-
 }
 
 function Footer() {
@@ -30,8 +29,7 @@ function Footer() {
   ];
   const snsList = sns.map((item) =>
       <li><a target="_blank" href={item.site}><img src={item.sns} alt="sns" /></a></li>    
-  )
-  // const select = ['TMAX GROUP', 'TMAX A&C', 'TMAXWAPL', 'TMAXMetaverse', 'TMAXTibero'];  
+  )  
   const selectArray = [
     {group: "Tmax Group", site: "https://www.tmax.co.kr/"},
     {group: "TMAX A&C", site: "https://www.tmax.co.kr/"},

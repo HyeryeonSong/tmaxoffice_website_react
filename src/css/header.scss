@@ -6,8 +6,9 @@
   background-color: #192033;
   font-size: 15px;
   display: flex;
+  position: relative;
   
-  .gnb__wrap {
+  .gnb__wrap {    
     @include desktop {
       width: 90%;
     }
@@ -16,6 +17,7 @@
     }
     display: flex;
     margin: 0 auto;
+    
     .gnb__logo { 
       display: flex;
       align-items: center;
@@ -25,15 +27,18 @@
       }
     }
     
-    .gnb__nav {
+    .gnb__nav {      
       margin-left: auto;
-      height: 4.68%;
+      height: 100%;
+      .gnb__toggle {        
+        display: none;
+      }
       
       .gnb__nav--list {
         width: 72%;
         display: flex;
         color: #192033;
-        
+                
         .gnb__nav--link {          
           margin-right: 105px;
           
@@ -57,8 +62,7 @@
             visibility: hidden;
             width: 100%;
             background-color: #9F9F9F;  
-            transition: all ease-in 0.1s;            
-            transition-delay: 0.1s;
+            transition: all ease-in 0.1s;                        
             &.active{
               z-index: 100;
               &::before {
@@ -96,7 +100,6 @@
               }
             }
           }
-          
           &:hover .active{        
             visibility: visible;
             z-index: 100;
@@ -107,6 +110,58 @@
           }          
         }
       }       
-    }
+    }    
+  }
+  @include tablet {    
+    height: 60px;
+    .gnb__wrap {
+      width: 100%;
+      margin: 0;
+      .gnb__logo {
+        margin-left: 10px;
+        margin-right: 0;
+        .gnb__logo--img {
+          width: 150px;
+        }
+      }
+      .gnb__nav {
+        width: 92%;
+        margin-left: 0;        
+        .gnb__toggle {          
+          display: block;
+          z-index: 90;
+          width: 20px;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);     
+          right: 0;     
+          img {
+            width: 100%;    
+            cursor: pointer;            
+          }
+        }
+        .gnb__nav--list {
+          background-color: #192033;
+          position: absolute;
+          margin-top: 60px;
+          z-index: 80;
+          width: 100%;
+          visibility: hidden;
+          max-height: 0;
+          transition: max-height 0.2s;
+          top: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          text-align: center;          
+          .gnb__nav--link {
+            width: 100%;   
+            .gnb__nav--submenu {
+              display: none;
+            }
+          }
+        }
+      }
+    }    
   }
 }

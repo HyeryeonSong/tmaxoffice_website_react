@@ -1,4 +1,4 @@
-@import url(./utils.scss);
+@import "utils.scss";
 
 // footer 
 footer {
@@ -15,7 +15,6 @@ footer {
     height: 1px;
     background-color: #383E4E;
   }
-
   .footer { 
     width: 64.427%;
     max-width: 1237px;
@@ -103,8 +102,7 @@ footer {
       width: 100%;
       display: flex;
       margin-top: 25px;
-      padding-bottom: 52px;
-      
+      padding-bottom: 52px;      
       .footer__bottom--logobox {
         margin-right: 2%;        
         img {
@@ -139,6 +137,9 @@ footer {
         .snsbox--list {
           display: flex;
           li {
+            &:hover {
+              opacity: 0.8;
+            }
             img {
               width: 24px;                        
             }
@@ -150,4 +151,49 @@ footer {
       }
     }
   }
+  @include tablet {        
+    height: 100%;
+    padding: 10px;
+    
+    &::before {
+      content: "";
+      display: none;
+    }
+    .footer {
+      width: 90%;
+      display: flex;
+      flex-direction:column-reverse;
+      .footer__top{
+        flex-direction: column;
+        align-items: flex-start;        
+        margin-top: 24px;
+        .footer__top--privacy {
+          a {
+            &::before {
+              content: "";
+              display: none;         
+            }
+          }
+        }
+        .footer__top--selectbox {
+          display: none;
+        }
+      }
+      .footer__bottom {
+        flex-direction: column;
+        padding-bottom: 0;
+        min-width: 375px;
+
+        .footer__bottom--address {
+          margin-top: 14px;
+        }
+        .footer__bottom--snsbox {
+          margin-top: 14px;
+          margin-left: 0;
+        }
+      }
+    }
+  }  
 }
+
+

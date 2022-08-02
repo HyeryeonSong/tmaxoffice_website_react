@@ -1,16 +1,38 @@
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
 import '../../css/header.scss';
 import TmaxLogo from '../../img/Tmax_logo.png';
+import Hamburger from '../../img/icon_menu.png';
+import Close from '../../img/icon_close.png';
 import { Link } from "react-router-dom";
 
 
-function OpenSubmenu() {  
-  const submenu = document.querySelectorAll('.gnb__nav--link .gnb__nav--submenu');
-  for (let i=0; i<submenu.length; i++) {
-    submenu[i].classList.add('active')
-  }
-}
 
 function Header() {
+  const [menu, setMenu] = useState(true);
+  const OpenMenu = () => {    
+    const gnbList = document.querySelector('.gnb__nav--list');    
+    if(gnbList.style.visibility === "hidden") {
+      gnbList.style.visibility = "visible";
+      gnbList.style.maxHeight = "450px";
+      setMenu(false);
+    } else {      
+      gnbList.style.visibility = "hidden";
+      gnbList.style.maxHeight = "0";
+      setMenu(true);
+
+    }
+
+  }
+  
+  const OpenSubmenu = () => {
+    const submenu = document.querySelectorAll('.gnb__nav--link .gnb__nav--submenu');    
+    for (let i=0; i<submenu.length; i++) {
+      submenu[i].classList.add('active')
+    }
+  }
+
   return (    
     <div className="gnb__wrapper">      
       <div className="gnb__wrap">
@@ -20,6 +42,13 @@ function Header() {
           </Link>
         </div>
         <nav className="gnb__nav" >
+          <div className="gnb__toggle" onClick={OpenMenu}>
+            {menu ? 
+                <img src={Hamburger} alt="메뉴보기" /> 
+              : <img src={Close} alt="메뉴닫기" /> 
+            }
+            
+          </div>
           <ul className="gnb__nav--list">
             <li className="gnb__nav--link">
               <div className="gnb__nav--link-title">
@@ -69,7 +98,7 @@ function Header() {
                 <Link to="/">CONTACT</Link>
               </div>
             </li>
-          </ul>
+          </ul>          
         </nav>
       </div>      
     </div>

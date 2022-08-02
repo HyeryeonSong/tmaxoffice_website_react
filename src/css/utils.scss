@@ -1,5 +1,13 @@
 $widedesktop: 1920px;
 $desktop: 1200px;
+$tablet: 1023px;
+
+/* 브라우저 크기가 1023px 이하일때 */
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
 
 /* 브라우저 크기가 1200px 이하일때 */
 @mixin desktop{

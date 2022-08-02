@@ -1,4 +1,7 @@
-@import url(./utils.scss);
+@charset "UTF-8";
+/* 브라우저 크기가 1023px 이하일때 */
+/* 브라우저 크기가 1200px 이하일때 */
+/* 브라우저 크기가 1920px 이하일때 */
 footer {
   width: 100%;
   background-color: #192033;
@@ -126,9 +129,51 @@ footer .footer .footer__bottom .footer__bottom--snsbox {
 footer .footer .footer__bottom .footer__bottom--snsbox .snsbox--list {
   display: flex;
 }
+footer .footer .footer__bottom .footer__bottom--snsbox .snsbox--list li:hover {
+  opacity: 0.8;
+}
 footer .footer .footer__bottom .footer__bottom--snsbox .snsbox--list li img {
   width: 24px;
 }
 footer .footer .footer__bottom .footer__bottom--snsbox .snsbox--list li:not(:first-child) {
   margin-left: 6px;
+}
+@media (max-width: 1023px) {
+  footer {
+    height: 100%;
+    padding: 10px;
+  }
+  footer::before {
+    content: "";
+    display: none;
+  }
+  footer .footer {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  footer .footer .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+  footer .footer .footer__top .footer__top--privacy a::before {
+    content: "";
+    display: none;
+  }
+  footer .footer .footer__top .footer__top--selectbox {
+    display: none;
+  }
+  footer .footer .footer__bottom {
+    flex-direction: column;
+    padding-bottom: 0;
+    min-width: 375px;
+  }
+  footer .footer .footer__bottom .footer__bottom--address {
+    margin-top: 14px;
+  }
+  footer .footer .footer__bottom .footer__bottom--snsbox {
+    margin-top: 14px;
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=footer.css.map */
