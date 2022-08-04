@@ -1,10 +1,17 @@
+@import "utils.scss";
+
+// Carousel
+
 .carousel--img {
-  width: 100vw;
+  width: 100%;
 }
 
-.slick-arrow {
-  width: 65px;
-  height: 65px;
+.slick-arrow {  
+  @include tablet {
+    visibility: hidden;
+  }
+  position: relative;
+  width: 4%;  
   border: 0;
   position: absolute;
   background-size: 100%;
@@ -14,6 +21,11 @@
   top: calc(50% - 65px);
   z-index: 10;
   cursor: pointer;
+  &::after {
+    display: block;
+    content: "";
+    padding-bottom: 100%;
+  }  
 } 
 
 .slick-prev {  
@@ -30,9 +42,80 @@
   ul {
     display: flex;
     position: absolute;
-    left: 50%;
-    bottom: 0;  
-    background-color: red; 
+    left: calc(50% - 40px);
+    bottom: 4%;      
+    li {      
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+      &.slick-active {
+        button {
+          width: 21px;
+          border-radius: 15px;
+          background-color: #C4C4C4;
+          opacity: 1;
+        }
+      }
+      button {   
+        cursor: pointer;    
+        transition: all 0.2s;
+        width: 12px;
+        height: 12px;
+        background-color: #C0C0C0;
+        opacity: 0.5;
+        border-radius: 50%;
+        text-indent: -9999px;
+        border: none;        
+      }
+    }
+  }  
+}
+
+// Contents
+.contents__wrap {
+  img {
+    width: 100%;
   }
-  
+  .content {  
+    &.content__1 {
+      background-color: #EFF3F8;
+    }  
+    .content__pin {
+      width: 32%;
+      height: 1px;
+      position: absolute;
+      background-color: #000;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -2px;
+        width: 5px;
+        height: 5px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+    }
+    .content__comp {      
+      display: flex;
+      width: 70%;
+      margin: 0 auto;
+      justify-content: space-between;
+      
+      .content__head {
+        font-family: noto-sans-display, sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 60px;
+      }
+      .content__text {        
+        display: block;
+        font-size: 18px;        
+        .text--strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }

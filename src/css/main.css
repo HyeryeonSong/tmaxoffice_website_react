@@ -1,10 +1,14 @@
+@charset "UTF-8";
+/* 브라우저 크기가 1023px 이하일때 */
+/* 브라우저 크기가 1200px 이하일때 */
+/* 브라우저 크기가 1920px 이하일때 */
 .carousel--img {
-  width: 100vw;
+  width: 100%;
 }
 
 .slick-arrow {
-  width: 65px;
-  height: 65px;
+  position: relative;
+  width: 4%;
   border: 0;
   position: absolute;
   background-size: 100%;
@@ -14,6 +18,16 @@
   top: calc(50% - 65px);
   z-index: 10;
   cursor: pointer;
+}
+@media (max-width: 1023px) {
+  .slick-arrow {
+    visibility: hidden;
+  }
+}
+.slick-arrow::after {
+  display: block;
+  content: "";
+  padding-bottom: 100%;
 }
 
 .slick-prev {
@@ -29,7 +43,69 @@
 .carousel--dots ul {
   display: flex;
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  background-color: red;
+  left: calc(50% - 40px);
+  bottom: 4%;
+}
+.carousel--dots ul li:not(:last-child) {
+  margin-right: 15px;
+}
+.carousel--dots ul li.slick-active button {
+  width: 21px;
+  border-radius: 15px;
+  background-color: #C4C4C4;
+  opacity: 1;
+}
+.carousel--dots ul li button {
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 12px;
+  height: 12px;
+  background-color: #C0C0C0;
+  opacity: 0.5;
+  border-radius: 50%;
+  text-indent: -9999px;
+  border: none;
+}
+
+.contents__wrap img {
+  width: 100%;
+}
+.contents__wrap .content.content__1 {
+  background-color: #EFF3F8;
+}
+.contents__wrap .content .content__pin {
+  width: 32%;
+  height: 1px;
+  position: absolute;
+  background-color: #000;
+}
+.contents__wrap .content .content__pin::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.contents__wrap .content .content__comp {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.contents__wrap .content .content__comp .content__head {
+  font-family: noto-sans-display, sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 60px;
+}
+.contents__wrap .content .content__comp .content__text {
+  display: block;
+  font-size: 18px;
+}
+.contents__wrap .content .content__comp .content__text .text--strong {
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
