@@ -2,11 +2,21 @@
 /* 브라우저 크기가 1023px 이하일때 */
 /* 브라우저 크기가 1200px 이하일때 */
 /* 브라우저 크기가 1920px 이하일때 */
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1023px) {
+  html {
+    font-size: 10px;
+  }
+}
 .gnb__wrapper {
   width: 100%;
   height: 90px;
   background-color: #192033;
-  font-size: 15px;
+  font-size: 1rem;
   display: flex;
   position: relative;
 }
@@ -91,13 +101,17 @@
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link {
   height: 25px;
+  cursor: pointer;
   padding-top: 21px;
   line-height: 25px;
   margin-right: 20px;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   color: #323232;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: 600;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link a:hover {
@@ -157,6 +171,11 @@
   }
   .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link {
     width: 100%;
+  }
+  .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--link-title a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
   }
   .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu {
     display: none;

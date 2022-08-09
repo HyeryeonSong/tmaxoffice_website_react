@@ -22,7 +22,7 @@ footer .footer {
   max-width: 1237px;
   margin: 0 auto;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 footer .footer .footer__top {
   display: flex;
@@ -46,7 +46,7 @@ footer .footer .footer__top .footer__top--selectbox .selectbox--title {
 footer .footer .footer__top .footer__top--selectbox .selectbox--title span {
   margin-top: 1px;
   color: #000;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 footer .footer .footer__top .footer__top--selectbox .selectbox--title img {
   width: 7px;
@@ -69,7 +69,7 @@ footer .footer .footer__top .footer__top--selectbox .selectbox--list .selectbox-
 }
 footer .footer .footer__top .footer__top--selectbox .selectbox--list .selectbox--link a {
   color: #000;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 footer .footer .footer__top .footer__top--selectbox .selectbox--list .selectbox--link:last-child::after {
   content: "";
@@ -80,7 +80,7 @@ footer .footer .footer__top .footer__top--selectbox .selectbox--list .selectbox-
   background-color: #858585;
 }
 footer .footer .footer__top .footer__top--privacy a {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 footer .footer .footer__top .footer__top--privacy a::before {
   content: "";
@@ -106,7 +106,7 @@ footer .footer .footer__bottom .footer__bottom--logobox img {
   width: 135px;
 }
 footer .footer .footer__bottom .footer__bottom--address {
-  font-size: 12px;
+  font-size: 0.75rem;
   min-width: 466px;
 }
 footer .footer .footer__bottom .footer__bottom--address .address--text {

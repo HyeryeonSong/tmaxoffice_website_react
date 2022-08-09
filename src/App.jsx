@@ -15,7 +15,6 @@ import NoticeMedia from './pages/NoticeMedia';
 import NoticeCareer from './pages/NoticeCareer';
 import ComingSoon from './pages/ComingSoon';
 
-
 const Wrapper = styled.div`
   width: 100%;
   height: auto;
@@ -35,7 +34,7 @@ function App() {
           <Route path="/product/servicetype" element={<ProductServiceType/>} />
           <Route path="/notice/media" element={<NoticeMedia/>} />
           <Route path="/notice/career" element={<NoticeCareer/>} />
-          <Route path="*" element={<ComingSoon/>} />
+          <Route path="*" element={<ComingSoon/>} />ㅇㅇ
         </Routes>
       </Wrapper>
       <Footer />

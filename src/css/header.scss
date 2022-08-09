@@ -1,10 +1,21 @@
 @import "utils.scss";
 
+@include desktop {
+  html {
+    font-size: 12px;
+  }
+}
+@include tablet {
+  html {
+    font-size: 10px;
+  }
+}
+
 .gnb__wrapper {
   width: 100%;
   height: 90px;
   background-color: #192033;
-  font-size: 15px;
+  font-size: 1rem;
   display: flex;
   position: relative;
   
@@ -46,7 +57,7 @@
             margin-right: 0;
           }
           
-          .gnb__nav--link-title {            
+          .gnb__nav--link-title {
             height: 90px;
             line-height: 90px;
             &:hover a {
@@ -86,12 +97,16 @@
               z-index: 100;
               .submenu--link {
                 height: 25px;
+                cursor: pointer;
                 padding-top: 21px;
                 line-height: 25px;
                 margin-right: 20px;
                 a {
+                  display: inline-block;
+                  width: 100%;
+                  height: 100%;
                   color: #323232;
-                  font-size: 15px;
+                  font-size: 0.938rem;
                   font-weight: 600;
                   &:hover {
                     text-shadow: 0 0 .5px #323232, 0 0 .5px #323232;
@@ -154,8 +169,15 @@
           flex-direction: column;
           text-align: center;                          
           z-index: 20;          
-          .gnb__nav--link {
-            width: 100%;
+          .gnb__nav--link {            
+            width: 100%;       
+            .gnb__nav--link-title {
+              a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+              }
+            }     
             .gnb__nav--submenu {
               display: none;
             }
