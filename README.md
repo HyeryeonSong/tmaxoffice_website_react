@@ -1,6 +1,6 @@
 # TmaxOffice_website
 
-티맥스오피스 홈페이지 리뉴얼(2022.07.~)
+티맥스오피스 홈페이지 리뉴얼(2022.07.~) - 진행중
 
 ## Getting Started with Create React App
 
