@@ -4,12 +4,12 @@
 /* 브라우저 크기가 1920px 이하일때 */
 @media (max-width: 1200px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1023px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 .gnb__wrapper {
@@ -113,6 +113,8 @@
   color: #323232;
   font-size: 0.938rem;
   font-weight: 600;
+  transition: ease-in;
+  transition-delay: 0.1s;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link a:hover {
   text-shadow: 0 0 0.5px #323232, 0 0 0.5px #323232;

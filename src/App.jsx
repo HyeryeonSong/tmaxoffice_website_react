@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Reset } from 'styled-reset';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import './css/common.scss';
@@ -25,7 +24,6 @@ function App() {
   return (
     <>
       <Wrapper>
-        <Reset />
         <Header />           
         <Routes>
           <Route exact path="/" element={<Main />}/>

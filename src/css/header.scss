@@ -2,12 +2,12 @@
 
 @include desktop {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @include tablet {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -108,6 +108,8 @@
                   color: #323232;
                   font-size: 0.938rem;
                   font-weight: 600;
+                  transition: ease-in;
+                  transition-delay: 0.1s;
                   &:hover {
                     text-shadow: 0 0 .5px #323232, 0 0 .5px #323232;
                   }
