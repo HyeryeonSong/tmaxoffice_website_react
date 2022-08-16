@@ -62,11 +62,9 @@
             line-height: 90px;
             &:hover a {
               color: #fff;
-              text-shadow: 0 0 .5px #fff, 0 0 .5px #fff;
             }    
             a {
               color: #9F9F9F;
-              font-weight: bold;
             }
           }
           .gnb__nav--submenu {
@@ -107,11 +105,10 @@
                   height: 100%;
                   color: #323232;
                   font-size: 0.938rem;
-                  font-weight: 600;
                   transition: ease-in;
                   transition-delay: 0.1s;
                   &:hover {
-                    text-shadow: 0 0 .5px #323232, 0 0 .5px #323232;
+                    color: red;
                   }
                 }
               }

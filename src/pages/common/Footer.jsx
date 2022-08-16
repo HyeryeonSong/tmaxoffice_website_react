@@ -28,7 +28,7 @@ function Footer() {
     {sns: youtube, site: "https://www.youtube.com/channel/UCSL_WpbQKwxFZpdMSqRaRTg"}
   ];
   const snsList = sns.map((item) =>
-      <li><a target="_blank" href={item.site}><img src={item.sns} alt="sns" /></a></li>    
+      <li><a target="_blank" rel="noreferrer" href={item.site}><img src={item.sns} alt="sns" /></a></li>    
   )  
   const selectArray = [
     {group: "Tmax Group", site: "https://www.tmax.co.kr/"},
@@ -39,7 +39,7 @@ function Footer() {
   ]
   
   const selectList = selectArray.map((obj) => 
-      <li className="selectbox--link"><a target="_blank" href={obj.site}>{obj.group}</a></li>
+      <li className="selectbox--link"><a target="_blank" rel="noreferrer" href={obj.site}>{obj.group}</a></li>
   )
 
   return (

@@ -66,11 +66,9 @@
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--link-title:hover a {
   color: #fff;
-  text-shadow: 0 0 0.5px #fff, 0 0 0.5px #fff;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--link-title a {
   color: #9F9F9F;
-  font-weight: bold;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu {
   visibility: hidden;
@@ -112,12 +110,11 @@
   height: 100%;
   color: #323232;
   font-size: 0.938rem;
-  font-weight: 600;
   transition: ease-in;
   transition-delay: 0.1s;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link .gnb__nav--submenu .submenu--list .submenu--link a:hover {
-  text-shadow: 0 0 0.5px #323232, 0 0 0.5px #323232;
+  color: red;
 }
 .gnb__wrapper .gnb__wrap .gnb__nav .gnb__nav--list .gnb__nav--link:hover .active {
   visibility: visible;

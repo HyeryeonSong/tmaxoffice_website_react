@@ -1,12 +1,9 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import Hamburger from '../../img/icon_menu.png';
 import Close from '../../img/icon_close.png';
 
-
-
 function NavList(props) {       
-  console.log(props.OpenMenu);
   // submenu
   const OpenSubmenu = () => {
     const submenu = document.querySelectorAll('.gnb__nav--link .gnb__nav--submenu');    
@@ -21,6 +18,7 @@ function NavList(props) {
     {title: "NOTICE", link: "/notice/media", subtitle: "언론보도"},
     {title: "NOTICE", link: "/notice/career", subtitle: "채용 프로세스"}
   ];
+  
   const subMenu = subList.map((item) => {
     if(props.title === item.title) { // nav title과 subList title이 같을 때 해당 서브메뉴 반환
       return (
@@ -49,7 +47,6 @@ function NavList(props) {
 }
 
 function Nav({menu, gnbList, OpenMenu}) {
-  console.log(OpenMenu);
   return (
     <nav className="gnb__nav" >
       <div className="gnb__toggle" onClick={OpenMenu}>

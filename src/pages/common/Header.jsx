@@ -19,7 +19,7 @@ function Header() {
       setMenu(true);
     }
   }
-  
+    
   return (    
     <div className="gnb__wrapper">      
       <div className="gnb__wrap">

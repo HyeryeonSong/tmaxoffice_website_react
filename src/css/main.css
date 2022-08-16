@@ -110,6 +110,7 @@
   font-size: 3rem;
   font-family: "Noto Sans", sans-serif;
   font-weight: 800;
+  line-height: 4rem;
 }
 .contents__wrap .content .content__title .title--italic {
   font-family: noto-sans-display, sans-serif;
@@ -215,7 +216,8 @@
   width: 180px;
   height: 50px;
   line-height: 50px;
-  text-indent: 18px;
+  font-size: 1rem;
+  text-indent: 15px;
   border-radius: 25px;
   background-color: #323232;
   transition: all 0.2s;
