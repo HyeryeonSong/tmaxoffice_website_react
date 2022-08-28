@@ -1,0 +1,199 @@
+@import "utils.scss";
+
+// footer 
+footer {
+  width: 100%;
+  background-color: #192033;
+  height: 182px;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    height: 1px;
+    background-color: #383E4E;
+  }
+  .footer { 
+    width: 64.427%;
+    max-width: 1237px;
+    margin: 0 auto;  
+    color: #fff;
+    font-size: 0.875rem;
+    
+    .footer__top {
+      display: flex;
+      align-items: center;      
+      height: 48px;
+      justify-content: space-between;
+      min-width: 730px;
+
+      .footer__top--selectbox {        
+        .selectbox--title {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          width: 102px;
+          height: 23px;          
+          background-color: #fff;
+          border: 1px solid #858585;
+          padding: 0 10px;
+          box-sizing: border-box;          
+          justify-content: space-between;
+          span {
+            margin-top: 1px;
+            color: #000;
+            font-size: 0.625rem;
+          }
+          img {
+            width: 7px;   
+            transition: 0.3s all ease;   
+          }
+        }
+        .selectbox--list {
+          display: none;
+          position: absolute;
+          top: -89px;
+          width: 102px;
+          height: 103px;
+          background-color: #fff;
+          border: 1px solid #858585;
+          border-bottom: 0;
+          box-sizing: border-box;
+          padding: 5px 10px;
+          .selectbox--link {
+            margin-bottom: 5px;            
+            a {
+              color: #000;
+              font-size: 0.625rem;
+            }
+            &:last-child::after {
+              content: "";
+              display: block;
+              margin-top: 5.5px;
+              width: 82px;
+              height: 0.5px;
+              background-color: #858585;
+            }
+          }
+        }
+      }
+      
+      .footer__top--privacy {
+        a {
+          font-size: 0.875rem;
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            background-color: #888;
+            margin-right: 16px;            
+          }
+        }
+      }
+      .footer__top--selectbox {
+        display: inline-block;        
+      }
+    }
+  
+    .footer__bottom {
+      width: 100%;
+      display: flex;
+      margin-top: 25px;
+      padding-bottom: 52px;      
+      .footer__bottom--logobox {
+        margin-right: 2%;        
+        img {
+          width: 135px;
+        }
+      }
+      .footer__bottom--address {
+        font-size: 0.75rem;
+        min-width: 466px;
+        .address--text {
+          margin-bottom: 8px;
+        }        
+        .footer__bottom--contact {
+          .contact--list {
+            display: flex;
+            .contact--link {
+              &:not(:first-child)::before {
+                content:"";
+                display: inline-block;
+                width: 1px;
+                height: 10px;
+                background-color: #888;
+                margin: 0 8px;
+              }
+            }
+          }
+        }
+      }
+      
+      .footer__bottom--snsbox {
+        margin-left: auto;
+        .snsbox--list {
+          display: flex;
+          li {
+            &:hover {
+              opacity: 0.8;
+            }
+            img {
+              width: 24px;                        
+            }
+            &:not(:first-child) {
+              margin-left: 6px;
+            }
+          }
+        }        
+      }
+    }
+  }
+  @include tablet {        
+    height: 100%;
+    padding: 10px;
+    
+    &::before {
+      content: "";
+      display: none;
+    }
+    .footer {
+      width: 90%;
+      display: flex;
+      flex-direction:column-reverse;
+      .footer__top{
+        flex-direction: column;
+        align-items: flex-start;        
+        margin-top: 24px;
+        .footer__top--privacy {
+          a {
+            &::before {
+              content: "";
+              display: none;         
+            }
+          }
+        }
+        .footer__top--selectbox {
+          display: none;
+        }
+      }
+      .footer__bottom {
+        flex-direction: column;
+        padding-bottom: 0;
+        min-width: 375px;
+
+        .footer__bottom--address {
+          margin-top: 14px;
+        }
+        .footer__bottom--snsbox {
+          margin-top: 14px;
+          margin-left: 0;
+        }
+      }
+    }
+  }  
+}
+
+
