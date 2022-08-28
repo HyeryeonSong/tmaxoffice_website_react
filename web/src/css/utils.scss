@@ -1,0 +1,17 @@
+$widedesktop: 1920px;
+$desktop: 1200px;
+
+/* 브라우저 크기가 1200px 이하일때 */
+@mixin desktop{
+  @media (max-width: $desktop){
+    @content;
+  }
+}
+
+
+/* 브라우저 크기가 1920px 이하일때 */
+@mixin widedesktop{
+  @media (max-width: $widedesktop){
+    @content;
+  }
+}

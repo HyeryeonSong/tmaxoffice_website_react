@@ -1,0 +1,17 @@
+{
+  "link": [
+    { "id": 1, "title": "About", "url": "/"},
+    { "id": 2, "title": "PRODUCT", "url": "/product/1"},
+    { "id": 3, "title": "DEMO", "url": "/"},
+    { "id": 4, "title": "NOTICE", "url": "/notice/4"},
+    { "id": 5, "title": "CONTACT", "url": "/"}
+  ],
+  "sub": [
+    { "id": 1, "title": "product", "subtitle": "SuperOffice"},
+    { "id": 2, "title": "product", "subtitle": "SuperDocument"},
+    { "id": 3, "title": "product", "subtitle": "서비스 유형"},
+    { "id": 4, "title": "notice", "subtitle": "언론 보도"},
+    { "id": 5, "title": "notice", "subtitle": "채용 프로세스"},
+    { "id": 6, "title": "notice", "subtitle": "자주 묻는 질문"}
+  ]
+}

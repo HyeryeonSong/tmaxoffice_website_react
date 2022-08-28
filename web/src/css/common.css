@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  text-align: center;
+}
+section h2 {
+  font-size: 30px;
+  position: absolute;
+}/*# sourceMappingURL=common.css.map */
